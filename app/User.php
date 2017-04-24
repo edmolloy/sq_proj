@@ -26,4 +26,42 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    /**
+     * Returns all entries from DB::listings that belong to $this user.
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function listings() {
+        return $this->hasMany(Listing::class);
+    }
+
+
+    /**
+     * Returns all entries from DB::listings_on_watch that belong to $this user
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function listingsOnWatch() {
+        return $this->hasMany(ListingOnWatch::class);
+    }
+
+
+    /**
+     * Returns all entries from DB::desired_listings that belong to $this user.
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function desiredListings() {
+        return $this->hasMany(DesiredListing::class);
+    }
+
+
+    /**
+     * Returns all entries from DB::bought_listings that belong to $this user.
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function boughtListings() {
+        return $this->hasMany(BoughtListing::class);
+    }
+
+
 }

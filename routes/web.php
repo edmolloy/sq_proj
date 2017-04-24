@@ -21,6 +21,30 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
-Route::get('/settings', function () {
-    return view('settings');
+Route::get('settings', ['as'=>'settings',
+    function () {
+        return view('settings');
+}]);
+
+
+Route::get('electronics', function () {
+    return view::make('electronics', array('main_id'=>1,
+                                            'num_sub'=>1));
+});
+
+Route::get('example', function() {
+    return view('example');
+});
+
+
+Route::get('listings', function() {
+    return \App\Listing::all();
+});
+
+Route::get('users', function() {
+    return \App\User::all();
+});
+
+Route::get('a', function() {
+    return \App\ListingOnWatch::all();
 });
