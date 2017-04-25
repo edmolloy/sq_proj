@@ -20,6 +20,30 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+
+Route::get('example/{listing_id}', function ($listing_id) {
+    $listing = \App\Listing::find($listing_id);
+
+    return view('example', ['listing'=>$listing]);
+});
+
+Route::get('updatelisting/{listing_id}', function ($listing_id) {
+    $listing = \App\Listing::find($listing_id);
+
+    return view('updatelisting', ['listing'=>$listing]);
+});
+
+Route::post('updatelisting/{listing_id}', 'UpdateListingController@update');
+
+Route::get('removefromwatchlist/{listing_id}', function ($listing_id) {
+    $listing = \App\Listing::find($listing_id);
+
+    return view('removefromwatchlist', ['listing' => $listing]);
+});
+Route::post('removefromwatchlist/{listing_id}', 'RemoveFromWatchListController@remove');
+
+
+
 Route::get('mylistings', ['as'=>'mylistings',
     function () {
         $listings = \App\User::find(Auth::user()->id)->listings;

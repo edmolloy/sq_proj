@@ -27,9 +27,7 @@
                                                 </p>
                                             </div>
                                             <div class="panel-footer" align="center">
-                                                <button type="submit" class="btn btn-primary">
-                                                    Remove Listing
-                                                </button>
+                                                <a href="{{ url('updatelisting/' . $listing->id ) }}" class="btn btn-primary">Edit Listing</a>
                                             </div>
                                         </div>
                                     </div>

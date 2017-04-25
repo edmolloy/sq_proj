@@ -44,13 +44,13 @@ class NewListingController extends Controller
 
         if($id) {
 
-            $request->session()->flash('success', 'Your listings has been created.');
+            $request->session()->flash('success', 'Your listing has been created.');
 
             return back();
 
         }
 
-        $request->session()->flash('failure', 'Your listings has not been created.');
+        $request->session()->flash('failure', 'Your listing has not been created.');
 
         return back();
 

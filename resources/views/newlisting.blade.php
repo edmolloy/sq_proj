@@ -7,6 +7,12 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Create Listing</div>
                     <div class="panel-body">
+                        @if (Session::has('success'))
+                            <div class="alert alert-success">{!! Session::get('success') !!}</div>
+                        @endif
+                        @if (Session::has('failure'))
+                            <div class="alert alert-danger">{!! Session::get('failure') !!}</div>
+                        @endif
                         <form class="form-horizontal" role="form" method="POST" action="{{ route('newlisting') }}">
                             {{ csrf_field() }}
 
@@ -56,7 +62,7 @@
                             </div>
 
 
-                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
                                 <label for="password" class="col-md-4 control-label">Description</label>
 
                                 <div class="col-md-6">

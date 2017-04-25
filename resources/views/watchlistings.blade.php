@@ -7,7 +7,7 @@
             <div class="col-md-12">
 
                 <div class="panel panel-default">
-                    <div class="panel-heading"> {{ Auth::user()->name}}/My Listings </div>
+                    <div class="panel-heading"> {{ Auth::user()->name}}/Listings on Watch </div>
                     <div class="panel-body">
 
                         @foreach ($listings as $listing)
@@ -27,9 +27,9 @@
                                                 </p>
                                             </div>
                                             <div class="panel-footer" align="center">
-                                                <button type="submit" class="btn btn-primary">
-                                                    Remove from Watch
-                                                </button>
+                                                <a href="{{ route('removefromwatchlist/' . $listing->id) }}" class="btn btn-primary">
+                                                    Remove from Watch List
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
