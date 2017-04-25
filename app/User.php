@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\DB;
+
 
 class User extends Authenticatable
 {
@@ -26,7 +28,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
 
     /**
      * Returns all entries from DB::listings that belong to $this user.
@@ -59,9 +60,8 @@ class User extends Authenticatable
      * Returns all entries from DB::bought_listings that belong to $this user.
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function boughtListings() {
-        return $this->hasMany(BoughtListing::class);
+    public function purchasedListings() {
+        return $this->hasMany(PurchasedListing::class);
     }
-
 
 }

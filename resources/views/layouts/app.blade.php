@@ -46,56 +46,128 @@
                         @if (!Auth::guest())
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    Listing Categories <span class="caret"></span>
+                                    Electronics <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Electronics
+                                        <a href="{{ route('listings/electronics/phones') }}">
+                                            Phones
                                         </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Clothing
+                                        <a href="{{ route('listings/electronics/tvs') }}">
+                                            TVs
                                         </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Automobiles
+                                        <a href="{{ route('listings/electronics/computers') }}">
+                                            Computers
                                         </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Furniture
+                                        <a href="{{ route('listings/electronics/appliances') }}">
+                                            Appliances
                                         </a>
+                                    </li>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
+                                    <li>
+                                        <a href="{{ route('listings/electronics/other') }}">
+                                            Other
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    Clothing <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('listings/clothing/mens') }}">
+                                            Men's
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('listings/clothing/womens') }}">
+                                            Women's
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('listings/clothing/kids') }}">
+                                            Kid's
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    Automobiles <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('listings/automobiles/cars') }}">
+                                            Cars
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('listings/automobiles/trucks') }}">
+                                            Trucks
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('listings/automobiles/motorcycles') }}">
+                                            Motorcycles
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('listings/automobiles/other') }}">
+                                            Other
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    Furniture <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('listings/furniture/kitchen') }}">
+                                            Kitchen
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('listings/furniture/office') }}">
+                                            Office
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('listings/furniture/bedroom') }}">
+                                            Bedroom
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('listings/furniture/office') }}">
+                                            Other
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
@@ -107,40 +179,35 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a href="{{ route('mylistings') }}">
                                             My Listings
                                         </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a href="{{ route('newlisting') }}">
+                                            Create Listings
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('watchlistings') }}">
                                             Listings on Watch
                                         </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a href="{{ route('logout') }}">
                                             Desired Listings
                                         </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
                                     </li>
+
+                                    <li>
+                                        <a href="{{ route('logout') }}">
+                                            Purchased Listings
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </li>
 
@@ -160,7 +227,10 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ route('settings') }}">Settings</a></li>
+                                    <li> <a href="#"> {{ Auth::user()->email }} </a> </li>
+                                    <hr>
+                                    <li><a href="{{ route('reset_email') }}">Change Email</a></li>
+                                    <li><a href="{{ route('reset_password') }}">Changed Password</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();

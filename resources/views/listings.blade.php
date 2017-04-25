@@ -1,4 +1,3 @@
-
 @foreach ($listings as $listing)
-    <h1> {{ $listing->title }}</h1>
+    <p> {{ $listing->title }}</p>
 @endforeach

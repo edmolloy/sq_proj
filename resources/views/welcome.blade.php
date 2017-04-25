@@ -14,8 +14,8 @@
         <style>
             html, body {
                 background-color: #fff;
-                /*color: #636b6f;*/
-                color: #1bc3d6;
+                color: #636b6f;
+                /*color: #1bc3d6;*/
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -91,17 +91,9 @@
                     </p>
 
                     <p>
-                        A place to search for an aquire items.
+                        A place to search for and aquire items.
                     </p>
                 </div>
-
-                {{--<div class="links">--}}
-                    {{--<a href="https://laravel.com/docs">Documentation</a>--}}
-                    {{--<a href="https://laracasts.com">Laracasts</a>--}}
-                    {{--<a href="https://laravel-news.com">News</a>--}}
-                    {{--<a href="https://forge.laravel.com">Forge</a>--}}
-                    {{--<a href="https://github.com/laravel/laravel">GitHub</a>--}}
-                {{--</div>--}}
             </div>
         </div>
     </body>

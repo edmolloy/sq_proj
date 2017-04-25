@@ -9,10 +9,11 @@ class SubCategory extends Model
     //
 
     protected $table = 'sub_categories';
+    public $timestamps = false;
+
 
 
     public function mainCategories() {
-        return $this->hasOne(MainCategory::class);
+        return $this->belongsTo(MainCategory::class);
     }
-
 }
