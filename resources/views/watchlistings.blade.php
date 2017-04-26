@@ -27,7 +27,8 @@
                                                 </p>
                                             </div>
                                             <div class="panel-footer" align="center">
-                                                <a href="{{ route('removefromwatchlist/' . $listing->id) }}" class="btn btn-primary">
+
+                                                <a href="{{ url('removefromwatchlist/' . $listing->id) }}" class="btn btn-primary">
                                                     Remove from Watch List
                                                 </a>
                                             </div>

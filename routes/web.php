@@ -21,10 +21,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
-Route::get('example/{listing_id}', function ($listing_id) {
-    $listing = \App\Listing::find($listing_id);
+Route::get('example', function () {
+    $listings = \DB::table('listings')
+        ->where('listings.description', 'LIKE', '%iPhone%')
+        ->orWhere('listings.title', 'LIKE', '%iPhone%')->get();
 
-    return view('example', ['listing'=>$listing]);
+    return view('example', ['listings'=>$listings]);
 });
 
 Route::get('updatelisting/{listing_id}', function ($listing_id) {
@@ -35,13 +37,11 @@ Route::get('updatelisting/{listing_id}', function ($listing_id) {
 
 Route::post('updatelisting/{listing_id}', 'UpdateListingController@update');
 
-Route::get('removefromwatchlist/{listing_id}', function ($listing_id) {
-    $listing = \App\Listing::find($listing_id);
 
-    return view('removefromwatchlist', ['listing' => $listing]);
-});
-Route::post('removefromwatchlist/{listing_id}', 'RemoveFromWatchListController@remove');
+Route::get('removefromwatchlist/{listing_id}', 'WatchListController@remove');
+Route::get('addtowatchlist/{listing_id}', 'WatchListController@add');
 
+Route::get('searchforlistings/{key_word}', 'SearchForListingsController@search');
 
 
 Route::get('mylistings', ['as'=>'mylistings',
@@ -51,17 +51,10 @@ Route::get('mylistings', ['as'=>'mylistings',
         return view('mylistings', ['listings'=>$listings]);
 }]);
 
-Route::get('example', ['as'=>'example',
-    function() {
-        $listings = \App\User::find(Auth::user()->id)->listings;
-
-        return view('example', ['listings'=>$listings]);
-}]);
-
 
 Route::get('watchlistings', ['as'=>'watchlistings',
     function () {
-        $listings_temp = \App\User::find(1)->listingsOnWatch;
+        $listings_temp = \App\User::find(Auth::user()->id)->listingsOnWatch;
         $listing_list = array();
 
         foreach ($listings_temp as $listing) {

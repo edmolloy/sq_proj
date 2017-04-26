@@ -28,9 +28,9 @@
                                                 </p>
                                             </div>
                                             <div class="panel-footer" align="center">
-                                                <button type="submit" class="btn btn-primary">
-                                                    Watch Listing
-                                                </button>
+                                                <a href="{{ url('addtowatchlist/' . $listing->id) }}" class="btn btn-primary">
+                                                    Add to Watch List
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
