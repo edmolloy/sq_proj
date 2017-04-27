@@ -197,14 +197,8 @@
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('logout') }}">
-                                            Desired Listings
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="{{ route('logout') }}">
-                                            Purchased Listings
+                                        <a href="{{ route('desiredlistings') }}">
+                                            Search For Listings
                                         </a>
                                     </li>
 

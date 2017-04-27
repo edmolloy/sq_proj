@@ -21,10 +21,16 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
+Route::get('desiredlistings', ['as'=>'desiredlistings',
+    function () {
+        return view('desiredlistings');
+}]);
+Route::post('desiredlistings', 'SearchForListingsController@search');
+
 Route::get('example', function () {
     $listings = \DB::table('listings')
-        ->where('listings.description', 'LIKE', '%iPhone%')
-        ->orWhere('listings.title', 'LIKE', '%iPhone%')->get();
+        ->where('listings.description', 'LIKE', '%windows%')
+        ->orWhere('listings.title', 'LIKE', '%windows%')->get();
 
     return view('example', ['listings'=>$listings]);
 });
@@ -40,6 +46,7 @@ Route::post('updatelisting/{listing_id}', 'UpdateListingController@update');
 
 Route::get('removefromwatchlist/{listing_id}', 'WatchListController@remove');
 Route::get('addtowatchlist/{listing_id}', 'WatchListController@add');
+Route::get('searchfordesiredlistings/{listing_id}', 'WatchListController@add');
 
 Route::get('searchforlistings/{key_word}', 'SearchForListingsController@search');
 
