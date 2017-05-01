@@ -14,10 +14,18 @@ class SearchForListingsController extends Controller
     }
 
 
-    public function search($key_word) {
+    public function search(Request $request)
+    {
+        $this->validate($request, [
+            'search' => 'required',
+
+        ]);
 
         $listings = \DB::table('listings')
-            ->where('description', 'LIKE', '%$key_word%')->get();
+            ->where('listings.description', 'LIKE', '%' . $request->search . '%')
+            ->orWhere ('listings.title', 'LIKE', '%' . $request->search . '%')->get();
 
+        return view('displaydesiredlistings', ['listings'=>$listings]);
     }
+
 }
