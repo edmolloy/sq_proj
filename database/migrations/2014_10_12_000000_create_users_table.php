@@ -1,3 +1,9 @@
+<!--
+
+This page stores the Users table information and migrates information from Webdev to Laravel.
+
+//-->
+
 <?php
 
 use Illuminate\Support\Facades\Schema;

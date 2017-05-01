@@ -1,3 +1,10 @@
+<!--
+
+This file is the HTML markup for the welcome page. It is the home page of SquareList when a user is not logged in.
+
+
+//-->
+
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
     <head>

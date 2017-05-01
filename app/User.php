@@ -1,5 +1,11 @@
 <?php
 
+//<!--
+//
+//This page stores relationship between User table and other relevant tabels.
+//
+////-->
+
 namespace App;
 
 use Illuminate\Notifications\Notifiable;

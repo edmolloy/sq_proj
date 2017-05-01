@@ -1,5 +1,7 @@
 <?php
 
+// This file handles the search method
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;

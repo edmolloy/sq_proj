@@ -1,3 +1,12 @@
+<!--
+
+This file is displayed when a user first logs in.
+
+All it does is display that they are logged in and welcomes them.
+
+
+//-->
+
 @extends('layouts.app')
 
 @section('content')

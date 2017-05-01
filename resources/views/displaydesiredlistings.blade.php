@@ -1,3 +1,15 @@
+<!--
+
+This file is the HTML markup for one of the listings categories.
+
+It retrieves each listing in through the database and displays that listings only if the categories match
+this page's specified category listing.
+
+
+//-->
+
+
+
 @extends('layouts.app')
 
 @section('content')

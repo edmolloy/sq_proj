@@ -1,5 +1,7 @@
 <?php
 
+// This file hadles the loading of the home page after a successful login.
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;

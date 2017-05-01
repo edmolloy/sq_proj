@@ -1,5 +1,11 @@
 <?php
 
+//<!--
+//
+//This page stores relationship between MainCategory table and other relevant tabels.
+//
+////-->
+
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;

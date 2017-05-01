@@ -1,5 +1,9 @@
 <?php
 
+// This file handles the adding and removal of listings to the Watch Listings table
+// it utalized transactions to either complete removal or addation, or not.
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;

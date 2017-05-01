@@ -1,4 +1,14 @@
+<!--
 
+This file is the HTML markup for the update listings page.
+
+It is a form which allows users to edit a listing in which they have previously altered.
+
+This form passes information invisibly between pages via a PHP post method.
+
+Javascript handles errors in the form sections.
+
+//-->
 @extends('layouts.app')
 
 @section('content')

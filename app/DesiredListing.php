@@ -1,5 +1,8 @@
 <?php
 
+//This table stores information regarding the Desited Listings table and all it's relations to other tables'
+
+
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;

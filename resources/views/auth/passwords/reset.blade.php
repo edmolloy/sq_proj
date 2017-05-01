@@ -1,3 +1,13 @@
+<!--
+
+This page is for the emial password reset function.
+
+It works by using a PHP Post method, but is not used as MailTrap does actually send emails on a trial account.
+
+It would work, if MailTrap was paid for.
+
+//-->
+
 @extends('layouts.app')
 
 @section('content')

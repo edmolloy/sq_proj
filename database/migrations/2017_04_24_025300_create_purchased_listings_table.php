@@ -1,3 +1,10 @@
+<!--
+
+This page stores the Purchased Listings table information and migrates information from Webdev to Laravel.
+
+//-->
+
+
 <?php
 
 use Illuminate\Support\Facades\Schema;

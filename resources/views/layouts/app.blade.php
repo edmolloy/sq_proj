@@ -1,3 +1,16 @@
+<!--
+
+This file contains code which conttructs a pager header consistent throughout each
+page of the website.
+
+If a user is logged in, the header will display listings menus and give the user the ability
+to change password, change email, post listings, etc. If the user is logged in,
+the header will allow the user to explore the full functionalty of the site.
+
+If a user is not logged in, the header will only display a login and register button.
+The user, if not logged in, will not be able to access the full functionality of the site.
+//-->
+
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>

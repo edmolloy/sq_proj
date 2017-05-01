@@ -1,5 +1,7 @@
 <?php
 
+// this controller handles the creation and insertion of new listings into the Listings table.
+
 namespace App\Http\Controllers;
 
 use App\User;

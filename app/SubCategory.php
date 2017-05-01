@@ -1,4 +1,11 @@
 <?php
+//
+//<!--
+//
+//This page stores relationship between SubCategory table and other relevant tabels.
+//
+////-->
+
 
 namespace App;
 

@@ -1,3 +1,15 @@
+<!--
+
+This file is the HTML markup for the wath listings section.
+
+This page retrieves each listing from the Watch Listings table of the dtabase, and displays the listings so users
+do not have to re-find listings which they have previously found and found interesting.
+
+It retrieves each listing in through the database and displays that listings only if the categories match
+this User's ID.
+
+//-->
+
 @extends('layouts.app')
 
 @section('content')

@@ -1,3 +1,17 @@
+<!--
+
+This file will construct the User Registration page.
+
+It is an extension of the layouts/app.blad.php file and is displayed
+in the content section of the app.blade.php file.
+
+This file contains HTML markup of the registraion page and javascript to display errors
+should the user forget to enter a required field or if the registration attempt is unsuccessful.
+
+This form is passed through a POST php method, which does not allow an individual to alter paramteres as
+they are passed invisibly throught the registration handler.
+//-->
+
 @extends('layouts.app')
 
 @section('content')

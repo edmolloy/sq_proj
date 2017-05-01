@@ -1,3 +1,14 @@
+<!--
+This file contains a POST method form to create a new listing.
+
+It gets the subcategory number, product title, price, and description, and inserts a row into the Listigns database table
+with an autoincremented Lisitng ID as a primary Key.
+
+Javascript handles errors.
+
+//-->
+
+
 @extends('layouts.app')
 
 @section('content')

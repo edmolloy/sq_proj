@@ -1,5 +1,7 @@
 <?php
 
+// This controller handles the updating of listings information.
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;

@@ -1,5 +1,8 @@
 <?php
 
+// This file handles the alteration of pages by loading views, initiating post and get method logic and variables
+// adn in some cases, handles the SQL code to pull data from Web dev.
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

@@ -1,3 +1,18 @@
+<!--
+
+This file is the HTML markup the my listings page.
+
+
+
+It retrieves each listing in through the database and displays that listings only if the categories match
+this page's User's created listings.
+
+Each listing contains a foreign key reference to the user who created that listing. Only listings that contain the
+logged in user's Primary KEy ID will be pulled from the database.
+
+
+//-->
+
 @extends('layouts.app')
 
 @section('content')

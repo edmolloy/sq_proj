@@ -1,3 +1,15 @@
+<!--
+
+This file is the HTML markup for the Forgot email page.
+
+If a user forgets their email, they can request a password reset sent to their email.
+
+This framework comes equipped with email capabilities. linked in the .env file is information to link
+a MailTrap account. it successfully recieves notice from Laravel and initiates the email sending process to
+actual email accounts.
+
+//-->
+
 @extends('layouts.app')
 
 @section('content')

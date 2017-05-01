@@ -1,3 +1,15 @@
+<!--
+
+This file is the HTML markup for the change password page.
+
+It passes information via a post method to the ResetEmailController, invisible from the URL.
+
+JavaScript handles errors before the information is passed. Should there be an error (i.e. old password is incorrect)
+then the ResetEmailController will return a session failure, and Javascript will also display that the attepmt
+to change the password was unsucessful.
+
+//-->
+
 @extends('layouts.app')
 
 @section('content')

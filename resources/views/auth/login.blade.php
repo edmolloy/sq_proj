@@ -1,3 +1,13 @@
+<!--
+
+This page will construct a login page. It passes information through a POST method, invisible from the URL.
+
+Javascript handles forgotten information. after the form insofmraiton is passed to the loginController,
+it will return a session success or failure. if success, the controller will load the home page, if not, it will pass
+the failure to the javascript and load errors on the page to notify the user that the login attempt was unsuccessful.
+
+//-->
+
 @extends('layouts.app')
 
 @section('content')
